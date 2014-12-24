@@ -1,0 +1,339 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"left",
+				"leftEye"
+			],
+			[
+				"In",
+				"InteractableObject"
+			],
+			[
+				"look",
+				"lookPoint"
+			],
+			[
+				"lef",
+				"leftEye"
+			],
+			[
+				"right",
+				"rightEye"
+			],
+			[
+				"rot",
+				"rotation"
+			],
+			[
+				"focu",
+				"focusPoint"
+			],
+			[
+				"pick",
+				"pickingUp"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"l",
+				"l"
+			],
+			[
+				"phy",
+				"physMinDmg"
+			],
+			[
+				"cri",
+				"critChance"
+			],
+			[
+				"magm",
+				"magMinDmg"
+			],
+			[
+				"obj",
+				"objectsToIgnore"
+			],
+			[
+				"Eve",
+				"EventHandler"
+			],
+			[
+				"Even",
+				"EventManager"
+			],
+			[
+				"Start",
+				"Start3DScreen"
+			],
+			[
+				"focal",
+				"focalPointZ"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"Uncon",
+				"Unconsious"
+			],
+			[
+				"cu",
+				"currentStats"
+			],
+			[
+				"Dama",
+				"DamageOverTime"
+			],
+			[
+				"IN",
+				"IEnumerator"
+			],
+			[
+				"hi",
+				"Hit"
+			],
+			[
+				"Po",
+				"POISONED"
+			],
+			[
+				"GetAS",
+				"GetAsArmor"
+			],
+			[
+				"Usabl",
+				"USABLE"
+			],
+			[
+				"armor",
+				"armorSlot"
+			],
+			[
+				"P",
+				"PATH_EQUIPS"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Eric/Desktop/Screen3D/Assets/Resources/Screen3D/Screen3D.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/.git/info/exclude",
+		"/C/Users/Eric/Desktop/Test/Assets/Resources/Screen3D/ConvertCameraTo3D.cs",
+		"/C/Users/Eric/Desktop/Test/Assets/Resources/Screen3D/Screen3D.cs",
+		"/C/Users/Eric/Desktop/MMORPG/Assets/Scripts/Skill.cs",
+		"/C/Users/Eric/Desktop/MMORPG/Assets/Scripts/Inventory.cs",
+		"/C/Users/Eric/Desktop/MMORPG/Assets/Scripts/Character.cs",
+		"/C/Users/Eric/Desktop/MMORPG/Assets/Scripts/InteractableObject.cs",
+		"/C/Users/Eric/Desktop/MMORPG/Assets/Scripts/Equip.cs",
+		"/C/Users/Eric/Desktop/MMORPG/Assets/Scripts/Stats.cs",
+		"/C/Users/Eric/Desktop/MMORPG/Assets/Scripts/Attributes.cs",
+		"/C/Users/Eric/Desktop/Screen3D/Assets/Scripts/Movement/PlayerMoveController.js",
+		"/C/Users/Eric/Desktop/Test/Assets/Scripts/Misc/ShowFps.js",
+		"/C/Users/Eric/Desktop/Test/Assets/Resources/Screen3D/Resize.cs",
+		"/C/Users/Eric/Desktop/Test/Assets/Resources/Screen3D/CameraMain.cs",
+		"/C/Users/Eric/Desktop/Test/Assets/Scripts/Fx/GlowPlaneAngleFade.js",
+		"/C/Users/Eric/Desktop/Test/Assets/Scripts/Movement/PlayerMoveController.js",
+		"/C/Users/Eric/Desktop/MMORPG/Assets/Scripts/InteractControl.cs",
+		"/C/Users/Eric/Desktop/Screen3D/Assets/Resources/Screen3D/Stereo.shader",
+		"/C/Users/Eric/Desktop/MMORPG/Assets/Scripts/Loot.cs",
+		"/C/Users/Eric/Desktop/Test/Assets/Explosions/Scripts/ScaleAndDestroyRefractSphere.js",
+		"/C/Users/Eric/Desktop/asdfasdfa/Assets/Resources/Screen3D/Screen3D.cs",
+		"/C/Users/Eric/Desktop/MMORPG/Assets/Scripts/Movement.cs",
+		"/C/Users/Eric/Desktop/MMORPG/Assets/Scripts/Pickup.cs",
+		"/C/Users/Eric/Desktop/MMORPG/Assets/Scripts/Player.cs",
+		"/C/Users/Eric/Desktop/MMORPG/Assets/Scripts/Usable.cs",
+		"/C/Users/Eric/Desktop/MMORPG/Assets/Scripts/Item.cs",
+		"/C/Users/Eric/Desktop/MMORPG/scripts.sublime-project",
+		"/C/Users/Eric/Desktop/LDS/Ball Throw/Assets/Scripts/Floor.cs",
+		"/C/Users/Eric/Desktop/LDS/Ball Throw/Assets/Scripts/Controls.cs",
+		"/C/Users/Eric/Desktop/Base Scripts/Assets/Console.cs",
+		"/C/Users/Eric/Desktop/Base Scripts/Assets/Notify.cs",
+		"/C/Users/Eric/Desktop/Base Scripts/Assets/SaveSceneToXml.cs",
+		"/C/Users/Eric/Desktop/Base Scripts/Assets/Loading.cs",
+		"/C/Users/Eric/Desktop/Base Scripts/Assets/HighScore.cs",
+		"/C/Users/Eric/Desktop/Base Scripts/Assets/DataManager.cs",
+		"/C/Users/Eric/Desktop/Base Scripts/Assets/EventManager.cs",
+		"/C/Users/Eric/Desktop/LDS/Crumble/tetris4/4Tetris/Assets/Scripts/DataSaver.cs",
+		"/C/Users/Eric/Desktop/LDS/Crumble/tetris4/4Tetris/Assets/Scripts/Credits.cs",
+		"/C/Users/Eric/Desktop/LDS/Crumble/tetris4/4Tetris/Assets/Scripts/MultiInput.cs",
+		"/C/Users/Eric/Desktop/Base Scripts/Assets/Main.cs",
+		"/C/Users/Eric/Desktop/universal.sublime-project",
+		"/C/Users/Eric/Desktop/EventManager.cs",
+		"/C/Users/Eric/Desktop/Base Scripts/EventManager.cs",
+		"/C/Users/Eric/Desktop/LDS/Net Hack/Assets/Scripts/_EmptyClass.cs",
+		"/C/Users/Eric/Desktop/nethack.sublime-project",
+		"/C/Users/Eric/Desktop/asdf.sublime-project",
+		"/C/Users/Eric/Desktop/stp_dinosaurSurvivalist.sublime-project",
+		"/C/Users/Eric/Desktop/Test/Assets/Resources/Screen3D/Start3DScreen.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Weapon.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Player.cs",
+		"/C/Users/Eric/Desktop/stp_dinosaurSurvivalist.sublime-workspace",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Character.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/StatusManager.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Movement.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Attributes.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Dinosaur.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/DataManager.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Item.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Equip.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Armor.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Inventory.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Usable.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Trap.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Pickup.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Stats.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Controls.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/CameraControls.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/_EmptyClass.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Status.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Food.cs",
+		"/C/Users/Eric/Desktop/LDS/Dinosaur Survivalist/Assets/Scripts/Main.cs",
+		"/C/Users/Eric/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Eric/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Eric/Dropbox/Public/Eric/Back up/Notes/network test/Assets/Scripts/NetworkManager.cs",
+		"/C/Users/Eric/Desktop/LDS/Crumble/tetris4/4Tetris/Assets/Scripts/MainMenu.cs",
+		"/C/Users/Eric/Desktop/LDS/Crumble/tetris4/4Tetris/Assets/Scripts/GoogleMobileAdsDemoScript.cs"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"closestLoot",
+			"+",
+			"listeners",
+			"eyeCenter",
+			"focalpoint",
+			"focalpointz",
+			"FollowMouse",
+			"file_",
+			"movement",
+			"Controls",
+			"RequireComponent",
+			"					\n",
+			"ShowInterstitial"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 151.0,
+	"status_bar_visible": true
+}
