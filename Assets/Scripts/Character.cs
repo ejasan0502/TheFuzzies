@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Character : MonoBehaviour {
 	public string description;
@@ -8,6 +9,30 @@ public class Character : MonoBehaviour {
 	public Stats currentStats;
 
 	protected bool invincible = false;
+	protected List<Skill> skills = new List<Skill>();
+
+	#region Get Methods
+	public List<Skill> SkillsLearned {
+		get { return skills; }
+	}
+	#endregion
+
+	public void AddSkill(Skill s){
+		foreach (Skill ss in skills){
+			if ( s == ss ){
+				Console.Log(this.name + " already learned " + s.name);
+				return;
+			}
+		}
+
+		skills.Add(s);
+	}
+
+	public void RemoveSkill(Skill s){
+		foreach (Skill ss in skills){
+			if ( s == ss ) skills.Remove(s);
+		}
+	}
 
 	public IEnumerator Invincibility(float x){
 		invincible = true;

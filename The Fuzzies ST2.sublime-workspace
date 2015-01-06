@@ -4,8 +4,72 @@
 		"selected_items":
 		[
 			[
+				"in",
+				"index"
+			],
+			[
+				"statu",
+				"statuses"
+			],
+			[
+				"stat",
+				"statuses"
+			],
+			[
+				"Set",
+				"SetActive"
+			],
+			[
+				"s3dS",
+				"s3dSlider2"
+			],
+			[
+				"s3",
+				"s3dSlider1"
+			],
+			[
+				"focu",
+				"focusDistance"
+			],
+			[
+				"eye",
+				"eyeWidth"
+			],
+			[
+				"s3d",
+				"s3dGUI"
+			],
+			[
+				"ort",
+				"orthographicSize"
+			],
+			[
+				"ri",
+				"rightEye"
+			],
+			[
 				"left",
 				"leftEye"
+			],
+			[
+				"right",
+				"rightEyeMatrix"
+			],
+			[
+				"rig",
+				"rightEyeMatrix"
+			],
+			[
+				"Apply",
+				"ApplyStatus"
+			],
+			[
+				"Inter",
+				"InteractWithObject"
+			],
+			[
+				"Intera",
+				"InteractControl"
 			],
 			[
 				"In",
@@ -20,16 +84,8 @@
 				"leftEye"
 			],
 			[
-				"right",
-				"rightEye"
-			],
-			[
 				"rot",
 				"rotation"
-			],
-			[
-				"focu",
-				"focusPoint"
 			],
 			[
 				"pick",
@@ -123,6 +179,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Assets/Scripts/Skill.cs",
+			"settings":
+			{
+				"buffer_size": 1105,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Character.cs",
+			"settings":
+			{
+				"buffer_size": 1297,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -148,6 +220,43 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Stats.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/BuffManager.cs",
+		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Resources/Screen3D/Screen3D.cs",
+		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Resources/Screen3D/S3D.cs",
+		"/C/Users/Eric/AppData/Local/Temp/S3D.cs",
+		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Resources/Screen3D/Stereo.shader",
+		"/C/Users/Eric/Desktop/asdf/Assets/Resources/Screen3D/S3D.cs",
+		"/C/Users/Eric/Desktop/asdf/Assets/Resources/Screen3D/Screen3D.cs",
+		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Resources/Screen3D/Resize.cs",
+		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Resources/Screen3D/CameraMain.cs",
+		"/C/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll",
+		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Resources/Screen3D/offsetProjection.js",
+		"/C/Users/Eric/AppData/Local/Temp/Temp1_$CameraProjection.zip/CameraProjection/Assets/Scripts/offsetProjection.js",
+		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Resources/Screen3D/asdfds.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Character.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/InteractControl.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/DebuffManager.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/The Fuzzies ST2.sublime-workspace",
+		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Scripts/Fx/MobileBloom.js",
+		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Test/Assets/Resources/Screen3D/Stereo.shader",
+		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Temp/ParsedCombinations-Stereo.shader",
+		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Temp/Compiled-Stereo-Android.shader",
+		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Test/Assets/Resources/Screen3D/CameraMain.cs",
+		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Test/Assets/Resources/Screen3D/Screen3D.cs",
+		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Test/Assets/Resources/Screen3D/ConvertCameraTo3D.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/_EmptyClass.cs",
+		"/C/Users/Eric/.ssh/id_rsa.pub",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/InteractableObject.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Loot.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Equip.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Loading.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Console.cs",
+		"/C/Users/Eric/.ssh/id_rsa",
+		"/C/Users/Eric/.ssh/known_hosts",
+		"/C/Users/Eric/Desktop/Base Scripts/Assets/SaveSceneToXml.cs",
+		"/C/Users/Eric/Desktop/Base Scripts/Assets/Notify.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/The Fuzzies ST2.sublime-project",
 		"/C/Users/Eric/Desktop/Screen3D/Assets/Resources/Screen3D/Screen3D.cs",
 		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/.git/info/exclude",
 		"/C/Users/Eric/Desktop/Test/Assets/Resources/Screen3D/ConvertCameraTo3D.cs",
@@ -179,8 +288,6 @@
 		"/C/Users/Eric/Desktop/LDS/Ball Throw/Assets/Scripts/Floor.cs",
 		"/C/Users/Eric/Desktop/LDS/Ball Throw/Assets/Scripts/Controls.cs",
 		"/C/Users/Eric/Desktop/Base Scripts/Assets/Console.cs",
-		"/C/Users/Eric/Desktop/Base Scripts/Assets/Notify.cs",
-		"/C/Users/Eric/Desktop/Base Scripts/Assets/SaveSceneToXml.cs",
 		"/C/Users/Eric/Desktop/Base Scripts/Assets/Loading.cs",
 		"/C/Users/Eric/Desktop/Base Scripts/Assets/HighScore.cs",
 		"/C/Users/Eric/Desktop/Base Scripts/Assets/DataManager.cs",
@@ -243,6 +350,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"performance",
+			"possible",
+			"possibl\npossible",
+			"UpdateFocusPoint",
+			"AdjustEyeWidth",
+			"slider",
+			"rect =",
+			"debug",
+			"status",
+			"struct",
 			"closestLoot",
 			"+",
 			"listeners",
@@ -273,8 +390,62 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Assets/Scripts/Skill.cs",
+					"settings":
+					{
+						"buffer_size": 1105,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								577,
+								577
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/Character.cs",
+					"settings":
+					{
+						"buffer_size": 1297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								875,
+								875
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
