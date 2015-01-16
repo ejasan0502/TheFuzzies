@@ -3,14 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Skill : MonoBehaviour {
-	public string name;
 	public string description;
 	public bool passive;
 	public bool percent;
 	public Stats stats;
 	public List<Skill> prerequisites;
-
-	public virtual void Cast(Character c){}
 
 	public Skill(){
 		name = "";
@@ -49,4 +46,8 @@ public class Skill : MonoBehaviour {
 
 		return count >= prerequisites.Count ? true : false;
 	}
+
+	public virtual void Cast(Character c){}
+	public virtual void Cast(List<Character> c){}
+	public virtual void Cancel(){}
 }

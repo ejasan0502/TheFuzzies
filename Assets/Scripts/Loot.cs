@@ -6,7 +6,6 @@ public class Loot : InteractableObject {
 
 	protected override void Start(){
 		base.Start();
-		isLoot = true;
 	}
 
 	public override void Interact(Player p){

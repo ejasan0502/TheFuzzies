@@ -2,8 +2,6 @@
 using System.Collections;
 
 public abstract class InteractableObject : MonoBehaviour {
-	public bool isLoot = false;
-
 	protected virtual void Start(){
 		tag = "interactable";
 	}

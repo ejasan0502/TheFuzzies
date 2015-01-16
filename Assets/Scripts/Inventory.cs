@@ -5,14 +5,32 @@ using System.Collections.Generic;
 [System.Serializable]
 public class Inventory {
 	public int maxSlots;
-	public Item[] items;
-	public int[] amt;
+	public Item[] items;	// ???
+	public int[] amt;		// ??? Why not use dictionary instead? Limitation?
+	public int money;
 
 	public Inventory(){
 		maxSlots = 0;
 		items = new Item[maxSlots];
 		amt = new int[maxSlots];
 	}
+	public Inventory(int ms, Item[] i, int[] a, int m){
+		maxSlots = ms;
+		items = i;
+		amt = a;
+		money = m;
+	}
+	public Inventory(Inventory i){
+		maxSlots = i.maxSlots;
+		items = i.items;
+		amt = i.amt;
+		money = i.money;
+	}
+
+	public void AddMoney(int x){
+		money += x;
+		if ( money < 0 ) money = 0;
+	} 
 
 	public bool AddItem(Item i){
 		return AddItem(i,1);

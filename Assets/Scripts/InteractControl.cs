@@ -24,6 +24,8 @@ public class InteractControl : MonoBehaviour {
 	}
 
 	public void InteractWithObject(){
+		if ( animating ) return;
+
 		animating = true;
 		InteractableObject closestInteractable = null;
 		foreach (GameObject o in GameObject.FindGameObjectsWithTag("interactable")){

@@ -30,8 +30,13 @@ public class Character : MonoBehaviour {
 
 	public void RemoveSkill(Skill s){
 		foreach (Skill ss in skills){
-			if ( s == ss ) skills.Remove(s);
+			if ( s == ss ) {
+				skills.Remove(s);
+				Console.Log(this.name + " unlearned " + s.name);
+				return;
+			}
 		}
+		Console.Log(this.name + " does not have the skill " + s.name);
 	}
 
 	public IEnumerator Invincibility(float x){

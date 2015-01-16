@@ -27,10 +27,10 @@ public class BuffManager : MonoBehaviour {
 			if ( s.frequency > 0 ){
 				float currentTime = Time.time - s.startTime;
 				if ( currentTime%s.frequency == 0 && currentTime != 0 ){
-					currentStats += s.stats;
+					c.currentStats += s.stats;
 				}
 			} else if ( s.duration == s.maxDuration ){
-				currentStats += s.stats;
+				c.currentStats += s.stats;
 			}
 
 			s.duration -= 1;
@@ -40,12 +40,6 @@ public class BuffManager : MonoBehaviour {
 		}
 	}
 
-	private bool Has(Status s){
-		foreach (Status ss in statuses){
-			if ( ss.name.ToLower() == s.name.ToLower() ) return true;
-		}
-		return false;
-	}
 	private int Has(Status s){
 		for (int i = 0; i < statuses.Count; i++){
 			if ( statuses[i].name.ToLower() == s.name.ToLower() ) return i;
@@ -64,13 +58,13 @@ public class BuffManager : MonoBehaviour {
 	}
 
 	public void RemoveStatus(Status s){
-		currentStats -= statuses.stats;
+		c.currentStats -= s.stats;
 		statuses.Remove(s);
 	}
 	public void RemoveStatus(int x){
 		if ( x >= statuses.Count || x < 0 ) return;
-		currentStats -= statuses.stats;
-		statuses.Remove(x);
+		c.currentStats -= statuses[x].stats;
+		statuses.Remove(statuses[x]);
 	}
 }
 
