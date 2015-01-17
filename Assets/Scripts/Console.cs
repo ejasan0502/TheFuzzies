@@ -5,19 +5,24 @@ using System.Collections.Generic;
 
 public class Console : MonoBehaviour {
 
-	public bool showGUI = true;
+	public bool showGUI = false;
 	public float scrollSpeed = 10.0f;
 
 	[HideInInspector] public List<string> logs = new List<string>();
 	[HideInInspector] public Vector2 scrollPosition = Vector2.zero;
 	private Vector2 prevMousePos = Vector2.zero;
 
-	private object _lock = new object();
-	public static Console instance;
-
-	void Awake(){
-		lock(_lock){
-			if ( instance == null ) instance = this;
+	private static object _lock = new object();
+	private static Console _instance;
+	public static Console instance {
+		get {
+			lock(_lock){
+				if ( _instance == null ) {
+					GameObject o = new GameObject("Console");
+					_instance = o.AddComponent<Console>();
+				}
+			}
+			return _instance;
 		}
 	}
 

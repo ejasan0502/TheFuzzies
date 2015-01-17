@@ -1,18 +1,18 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
+[RequireComponent(typeof(Player))]
 public class InteractControl : MonoBehaviour {
 	public KeyCode key = KeyCode.E;
 
 	private bool animating = false;
 	private Player p = null;
+	private Animator anim;
 
-	void Start(){
+	void Awake(){
 		p = GetComponent<Player>();
-		if ( p == null ) {
-			Console.Log(this.name + " does not have a Player component attached... Removing InteractControl");
-			Destroy(GetComponent<InteractControl>());
-		}
+		anim = GetComponent<Animator>();
 	}
 
 	void Update(){
@@ -27,6 +27,8 @@ public class InteractControl : MonoBehaviour {
 		if ( animating ) return;
 
 		animating = true;
+		anim.SetBool("Pickup",animating);
+
 		InteractableObject closestInteractable = null;
 		foreach (GameObject o in GameObject.FindGameObjectsWithTag("interactable")){
 			InteractableObject l = o.GetComponent<InteractableObject>();
@@ -45,11 +47,14 @@ public class InteractControl : MonoBehaviour {
 
 		if ( closestInteractable != null ){
 			closestInteractable.Interact(p);
+		} else {
+			Console.Log("No interactable object close by");
 		}
 	}
 
 	// Called when any animation ends
 	public void OnAnimationEnd(){
 		animating = false;
+		anim.SetBool("Pickup",animating);
 	}
 }
