@@ -7,9 +7,7 @@ using System.Collections.Generic;
 
 public class DataManager : MonoBehaviour {
 	// Equipment
-	public List<Equip> bombs;
-	public List<Equip> swords;
-	public List<Equip> hammers;
+	public List<Equip> weapons;
 	public List<Equip> armors;
 
 	private string path;
@@ -41,6 +39,15 @@ public class DataManager : MonoBehaviour {
 	void Start(){
 		path = Application.persistentDataPath + "/data.data";
 		LoadData();
+	}
+
+	public Equip GetWeapon(string s){
+		foreach (Equip e in weapons){
+			if ( s.ToLower() == e.name.ToLower() ){
+				return e;
+			}
+		}
+		return null;
 	}
 
 	#region SetData overload methods

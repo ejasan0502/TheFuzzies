@@ -3,4 +3,12 @@ using System.Collections;
 
 public class Player : Character {
 	public Inventory inventory;
+
+	void Start(){
+		LoadData();
+	}
+
+	private void LoadData(){
+
+	}
 }

@@ -5,11 +5,15 @@ using System.Collections.Generic;
 [System.Serializable]
 public class Inventory {
 	public int maxSlots;
-	public InventorySlot[] slots;
+	public InventorySlot[] slots = null;
 	public int money;
 
 	public Inventory(){
 		maxSlots = 0;
+		slots = new InventorySlot[maxSlots];
+	}
+	public Inventory(int ms){
+		maxSlots = ms;
 		slots = new InventorySlot[maxSlots];
 	}
 	public Inventory(int ms, InventorySlot[] s, int m){
@@ -89,9 +93,13 @@ public class Inventory {
 		return -1;
 	}
 	private int GetItemSlot(Item item){
+		if ( slots == null || slots.Length != maxSlots ){
+			slots = new InventorySlot[maxSlots];
+		}
+
 		if ( item.stackable ){
 			for (int i = 0; i < slots.Length; i++){
-				if ( item.name.ToLower() == slots[i].item.name.ToLower() ){
+				if ( slots[i] == null || item.name.ToLower() == slots[i].item.name.ToLower() ){
 					return i;
 				}
 			}

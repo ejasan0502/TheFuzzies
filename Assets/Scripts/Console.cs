@@ -18,12 +18,12 @@ public class Console : MonoBehaviour {
 		get {
 			if ( _instance == null ) {
 				lock(_lock){
-					Console c = GameObject.Find("Console").GetComponent<Console>();
+					GameObject c = GameObject.Find("Console");
 					if ( c == null ){
 						GameObject o = new GameObject("Console");
 						_instance = o.AddComponent<Console>();
 					} else {
-						_instance = c;
+						_instance = c.GetComponent<Console>();
 					}
 				}
 			}

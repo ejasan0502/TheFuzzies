@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Loot : InteractableObject {
 	public Item item;
+	public int amt;
 
 	protected override void Start(){
 		base.Start();
@@ -10,8 +11,12 @@ public class Loot : InteractableObject {
 
 	public override void Interact(Player p){
 		if ( item != null ){
-			p.inventory.AddItem(item);
-			Destroy(gameObject);
+			if ( p.inventory.AddItem(item,amt) ){
+				Console.Log(p.name + " has gained " + amt + " " + item.name);
+				Destroy(gameObject);
+			} else {
+				Console.Log("Inventory is full!");
+			}
 		}
 	}
 }

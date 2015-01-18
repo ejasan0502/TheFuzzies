@@ -6,7 +6,7 @@ public class Item {
 	public string name;
 	public string description;
 	public bool stackable;
-	public Recipe recipe;
+	public Recipe recipe = null;
 
 	public Item(){
 		name = "";
