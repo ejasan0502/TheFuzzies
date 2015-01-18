@@ -5,25 +5,21 @@ using System.Collections.Generic;
 [System.Serializable]
 public class Inventory {
 	public int maxSlots;
-	public Item[] items;	// ???
-	public int[] amt;		// ??? Why not use dictionary instead? Limitation?
+	public InventorySlot[] slots;
 	public int money;
 
 	public Inventory(){
 		maxSlots = 0;
-		items = new Item[maxSlots];
-		amt = new int[maxSlots];
+		slots = new InventorySlot[maxSlots];
 	}
-	public Inventory(int ms, Item[] i, int[] a, int m){
+	public Inventory(int ms, InventorySlot[] s, int m){
 		maxSlots = ms;
-		items = i;
-		amt = a;
+		slots = s;
 		money = m;
 	}
 	public Inventory(Inventory i){
 		maxSlots = i.maxSlots;
-		items = i.items;
-		amt = i.amt;
+		slots = i.slots;
 		money = i.money;
 	}
 
@@ -41,72 +37,51 @@ public class Inventory {
 
 		if ( index == -1 ) return false;
 
-		items[index] = i;
-		if ( i.stackable ) amt[index] += a;
+		if ( slots[index] == null || !slots[index].item.stackable )
+			slots[index] = new InventorySlot(i,a);
+		else {
+			slots[index].amt += a;
+		}
 
 		return true;
 	}
 
-	public void RemoveItem(Item item){
-		RemoveItem(item,1);
+	public void RemoveItem(int x){
+		slots[x] = null;
 	}
 
-	public void RemoveItem(Item item, int a){
-		for (int i = 0; i < items.Length; i++){
-			if ( items[i].name.ToLower() == item.name.ToLower() ){
-				amt[i] -= a;
-				if ( amt[i] < 1 ){
-					items[i] = null;
-					amt[i] = 0;
-				}
-				break;
-			}
-		}
-	}
-
-	public Dictionary<Item,int> IncreaseCapacity(int x){
+	public List<InventorySlot> SetCapacity(int x){
 		maxSlots = x;
 
-		Dictionary<Item,int> extra = new Dictionary<Item,int>();
-		Item[] newInv = new Item[maxSlots];
-		int[] newAmt = new int[maxSlots];
+		List<InventorySlot> extra = new List<InventorySlot>();
+		InventorySlot[] newInv = new InventorySlot[maxSlots];
 		for (int i = 0; i < maxSlots; i++){
-			newInv[i] = items[i];
-			newAmt[i] = amt[i];
+			newInv[i] = slots[i];
 		}
 
-		if ( items.Length > newInv.Length ){
-			for (int i = newInv.Length; i < items.Length; i++){
-				extra.Add(items[i],amt[i]);
+		if ( slots.Length > newInv.Length ){
+			for (int i = newInv.Length; i < slots.Length; i++){
+				extra.Add(slots[i]);
 			}
 		}
 
-		items = newInv;
-		amt = newAmt;
+		slots = newInv;
 
 		return extra;
 	}
 
-	public Item GetItem(Item i){
-		foreach (Item item in items){
-			if ( i.name.ToLower() == item.name.ToLower()){
-				return item;
-			}
-		}
-		return null;
-	}
-	public Item GetItem(string i){
-		foreach (Item item in items){
-			if ( i.ToLower() == item.name.ToLower()){
-				return item;
+	public InventorySlot GetSlot(Item it){
+		for (int i = 0; i < slots.Length; i++){
+			if ( slots[i].item.name.ToLower() == it.name.ToLower() ){
+				return slots[i];
 			}
 		}
 		return null;
 	}
 
 	private int GetEmptySlot(){
-		for (int i = 0; i < items.Length; i++){
-			if ( items[i] == null ){
+		for (int i = 0; i < slots.Length; i++){
+			if ( slots[i] == null ){
 				return i;
 			}
 		}
@@ -115,13 +90,28 @@ public class Inventory {
 	}
 	private int GetItemSlot(Item item){
 		if ( item.stackable ){
-			for (int i = 0; i < items.Length; i++){
-				if ( item.name.ToLower() == items[i].name.ToLower() ){
+			for (int i = 0; i < slots.Length; i++){
+				if ( item.name.ToLower() == slots[i].item.name.ToLower() ){
 					return i;
 				}
 			}
 		}
 
 		return GetEmptySlot();
+	}
+}
+
+public class InventorySlot {
+	public Item item;
+	public int amt;
+
+	public InventorySlot(){
+		item = null;
+		amt = 0;
+	}
+
+	public InventorySlot(Item i, int a){
+		item = i;
+		amt = a;
 	}
 }

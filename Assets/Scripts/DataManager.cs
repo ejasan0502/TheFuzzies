@@ -6,21 +6,41 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class DataManager : MonoBehaviour {
-	private string path;
-	public Dictionary<string,byte[]> data = new Dictionary<string,byte[]>();
+	// Equipment
+	public List<Equip> bombs;
+	public List<Equip> swords;
+	public List<Equip> hammers;
+	public List<Equip> armors;
 
-	private object _lock = new object();
-	public static DataManager instance;
+	private string path;
+	private Dictionary<string,byte[]> data = new Dictionary<string,byte[]>();
+
+	private static object _lock = new object();
+	private static DataManager _instance;
+	public static DataManager instance {
+		get {
+			if ( _instance == null ) {
+				lock(_lock){
+					DataManager d = GameObject.Find("DataManager").GetComponent<DataManager>();
+					if ( d == null ){
+						GameObject o = new GameObject("DataManager");
+						_instance = o.AddComponent<DataManager>();
+					} else {
+						_instance = d;
+					}
+				}
+			}
+			return _instance;
+		}
+	}
 
 	void Awake(){
-		lock(_lock){
-			if ( instance == null ) instance = this;
-		}
+		DontDestroyOnLoad(this);
 	}
 
 	void Start(){
 		path = Application.persistentDataPath + "/data.data";
-		// LoadData();
+		LoadData();
 	}
 
 	#region SetData overload methods

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
 public class Equip : Item {
 	public EquipSlot equipSlot;
 	public float dura;

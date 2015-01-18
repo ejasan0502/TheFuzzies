@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"Charac",
+				"CharacterController"
+			],
+			[
+				"NP",
+				"NPCType"
+			],
+			[
+				"re",
+				"reward_items"
+			],
+			[
+				"Quest",
+				"QuestObjective"
+			],
+			[
 				"in",
 				"index"
 			],
@@ -180,19 +196,27 @@
 	"buffers":
 	[
 		{
-			"file": "Assets/Scripts/Skill.cs",
+			"file": "Assets/Scripts/Movement.cs",
 			"settings":
 			{
-				"buffer_size": 1105,
+				"buffer_size": 1047,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/Scripts/Character.cs",
+			"file": "Assets/Scripts/InteractControl.cs",
 			"settings":
 			{
-				"buffer_size": 1297,
+				"buffer_size": 1423,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Console.cs",
+			"settings":
+			{
+				"buffer_size": 2645,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -220,12 +244,24 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Stats.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Recipe.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Item.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Inventory.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Quest.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Skill.cs",
 		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/BuffManager.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/NPC.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Loot.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/InteractableObject.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/InteractControl.cs",
 		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Resources/Screen3D/Screen3D.cs",
+		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Resources/Screen3D/Stereo.shader",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/EventManager.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Character.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/DataManager.cs",
+		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Stats.cs",
 		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Resources/Screen3D/S3D.cs",
 		"/C/Users/Eric/AppData/Local/Temp/S3D.cs",
-		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Resources/Screen3D/Stereo.shader",
 		"/C/Users/Eric/Desktop/asdf/Assets/Resources/Screen3D/S3D.cs",
 		"/C/Users/Eric/Desktop/asdf/Assets/Resources/Screen3D/Screen3D.cs",
 		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Resources/Screen3D/Resize.cs",
@@ -234,8 +270,6 @@
 		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Resources/Screen3D/offsetProjection.js",
 		"/C/Users/Eric/AppData/Local/Temp/Temp1_$CameraProjection.zip/CameraProjection/Assets/Scripts/offsetProjection.js",
 		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Resources/Screen3D/asdfds.cs",
-		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Character.cs",
-		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/InteractControl.cs",
 		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/DebuffManager.cs",
 		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/The Fuzzies ST2.sublime-workspace",
 		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Screen3D/Assets/Scripts/Fx/MobileBloom.js",
@@ -247,8 +281,6 @@
 		"/C/Users/Eric/Desktop/Other/Android 3D Screen/Test/Assets/Resources/Screen3D/ConvertCameraTo3D.cs",
 		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/_EmptyClass.cs",
 		"/C/Users/Eric/.ssh/id_rsa.pub",
-		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/InteractableObject.cs",
-		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Loot.cs",
 		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Equip.cs",
 		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Loading.cs",
 		"/C/Users/Eric/Desktop/The Fuzzies/TheFuzzies/Assets/Scripts/Console.cs",
@@ -350,6 +382,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"enum",
+			"Console.Log",
 			"performance",
 			"possible",
 			"possibl\npossible",
@@ -390,23 +424,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/Scripts/Skill.cs",
+					"file": "Assets/Scripts/Movement.cs",
 					"settings":
 					{
-						"buffer_size": 1105,
+						"buffer_size": 1047,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								577,
-								577
+								442,
+								442
 							]
 						],
 						"settings":
@@ -421,18 +455,45 @@
 				},
 				{
 					"buffer": 1,
-					"file": "Assets/Scripts/Character.cs",
+					"file": "Assets/Scripts/InteractControl.cs",
 					"settings":
 					{
-						"buffer_size": 1297,
+						"buffer_size": 1423,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								875,
-								875
+								1322,
+								1322
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scripts/Console.cs",
+					"settings":
+					{
+						"buffer_size": 2645,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								162,
+								162
 							]
 						],
 						"settings":

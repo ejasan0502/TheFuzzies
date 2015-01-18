@@ -16,14 +16,23 @@ public class Console : MonoBehaviour {
 	private static Console _instance;
 	public static Console instance {
 		get {
-			lock(_lock){
-				if ( _instance == null ) {
-					GameObject o = new GameObject("Console");
-					_instance = o.AddComponent<Console>();
+			if ( _instance == null ) {
+				lock(_lock){
+					Console c = GameObject.Find("Console").GetComponent<Console>();
+					if ( c == null ){
+						GameObject o = new GameObject("Console");
+						_instance = o.AddComponent<Console>();
+					} else {
+						_instance = c;
+					}
 				}
 			}
 			return _instance;
 		}
+	}
+
+	void Awake(){
+		DontDestroyOnLoad(this);
 	}
 
 	void Update(){
