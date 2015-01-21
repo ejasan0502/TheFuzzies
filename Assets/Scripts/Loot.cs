@@ -13,7 +13,10 @@ public class Loot : InteractableObject {
 		if ( item != null ){
 			if ( p.inventory.AddItem(new Item(item),amt) ){
 				Console.Log(p.name + " has gained " + amt + " " + item.name);
-				GameObject.FindWithTag("InventoryManager").GetComponent<InventoryManager>().UpdateInventory();
+				
+				InventoryManager im = InventoryManager.instance;
+				if ( im.display ) im.UpdateInventory();
+				
 				Destroy(gameObject);
 			} else {
 				Console.Log("Inventory is full!");

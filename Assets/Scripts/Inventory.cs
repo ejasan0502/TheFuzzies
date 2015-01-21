@@ -7,31 +7,37 @@ public class Inventory {
 	public int maxSlots;
 	public InventorySlot[] slots = null;
 	public int money;
+	public float weight;
 
 	public Inventory(){
 		maxSlots = 0;
 		slots = new InventorySlot[maxSlots];
 		money = 0;
+		weight = 0.0f;
 	}
 	public Inventory(int ms){
 		maxSlots = ms;
 		slots = new InventorySlot[maxSlots];
 		money = 0;
+		weight = 0.0f;
 	}
 	public Inventory(int ms, int m){
 		maxSlots = ms;
 		slots = new InventorySlot[maxSlots];
 		money = m;
+		weight = 0.0f;
 	}
 	public Inventory(int ms, InventorySlot[] s, int m){
 		maxSlots = ms;
 		slots = s;
 		money = m;
+		CalculateWeight();
 	}
 	public Inventory(Inventory i){
 		maxSlots = i.maxSlots;
 		slots = i.slots;
 		money = i.money;
+		CalculateWeight();
 	}
 
 	public void AddMoney(int x){
@@ -53,12 +59,15 @@ public class Inventory {
 		else {
 			slots[index].amt += a;
 		}
+		
+		CalculateWeight();
 
 		return true;
 	}
 
 	public void RemoveItem(int x){
 		slots[x] = null;
+		CalculateWeight();
 	}
 
 	public List<InventorySlot> SetCapacity(int x){
@@ -89,21 +98,15 @@ public class Inventory {
 		}
 		return null;
 	}
-
-	private int GetEmptySlot(){
-		for (int i = 0; i < slots.Length; i++){
-			if ( slots[i] == null ){
-				return i;
-			}
+	
+	private void CalculateWeight(){
+		weight = 0.0f;
+		foreach (InventorySlot i in slots){
+			if ( i != null ) weight += i.item.weight*i.amt;
 		}
-
-		return -1;
 	}
-	private int GetItemSlot(Item item){
-		if ( slots == null || slots.Length != maxSlots ){
-			slots = new InventorySlot[maxSlots];
-		}
 
+	private int GetItemSlot(Item item){
 		if ( item.stackable ){
 			for (int i = 0; i < slots.Length; i++){
 				if ( slots[i] == null || item.name.ToLower() == slots[i].item.name.ToLower() ){
@@ -112,7 +115,7 @@ public class Inventory {
 			}
 		}
 
-		return GetEmptySlot();
+		return -1;
 	}
 }
 

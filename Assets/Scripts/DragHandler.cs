@@ -6,7 +6,6 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 {
 	public static GameObject dragObject;
 	private RectTransform canvasRectTransform;
-	private Vector3 startPos;
 
 	void Start(){
 		canvasRectTransform = transform.parent as RectTransform;
@@ -17,7 +16,6 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 	public void OnBeginDrag (PointerEventData eventData)
 	{
 		dragObject = gameObject;
-		startPos = transform.position;
 	}
 
 	#endregion

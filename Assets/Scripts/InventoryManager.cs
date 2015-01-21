@@ -6,10 +6,12 @@ using System.Collections;
 public class InventoryManager : MonoBehaviour {
 	public Player p;
 	public Text currencyText;
+	public Text weightText;
 	public GameObject iconRef;
 	public GameObject slotsRect;
+	public bool display = false;
 
-	private static Object _lock;
+	private static Object _lock = new Object();
 	private static InventoryManager _instance;
 	public static InventoryManager instance {
 		get {
@@ -21,12 +23,13 @@ public class InventoryManager : MonoBehaviour {
 			return _instance;
 		}
 	}
-	private bool display = false;
+	private GameObject[] slotObjects;
 
 	void Start(){
 		foreach (Transform t in transform){
 			t.gameObject.SetActive(display);
 		}
+		slotObjects = new GameObject[p.inventory.maxSlots];
 		UpdateInventory();
 	}
 
@@ -57,11 +60,11 @@ public class InventoryManager : MonoBehaviour {
 	}
 
 	public void UpdateInventory(){
-		foreach (Transform t in transform.GetChild(1)){
-			Destroy(t.gameObject);
-		}
+		currencyText.text = p.inventory.money+"";
+		weightText.text = p.inventory.weight+"";
+	
 		for (int i = 0; i < p.inventory.slots.Length; i++){
-			if ( p.inventory.slots[i] != null ){
+			if ( !Exists (i) && p.inventory.slots[i] != null ){
 				GameObject o = Instantiate(iconRef) as GameObject;
 				o.transform.position = slotsRect.transform.position;
 				o.transform.SetParent(slotsRect.transform);
@@ -74,11 +77,12 @@ public class InventoryManager : MonoBehaviour {
 				if ( display ) {
 					o.GetComponent<RawImage>().texture = p.inventory.slots[i].item.icon;
 				}
+				slotObjects[i] = o;
 			}
 		}
 	}
-
-	public void OnDrag(){
-		EventSystem.current.currentSelectedGameObject.transform.position = Input.mousePosition;
+	
+	private bool Exists(int x){
+		return slotObjects[x] == null ? false : true;
 	}
 }

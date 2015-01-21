@@ -11,6 +11,7 @@ public class Usable : Item {
 		icon = null;
 		name = "";
 		description = "";
+		weight = 0.0f;
 		stackable = true;
 		stats = new Stats();
 		res = false;
@@ -21,6 +22,7 @@ public class Usable : Item {
 		icon = u.icon;
 		name = u.name;
 		description = u.description;
+		weight = u.weight;
 		stackable = true;
 		stats = u.stats;
 		res = u.res;

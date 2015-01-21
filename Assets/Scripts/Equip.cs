@@ -12,6 +12,7 @@ public class Equip : Item {
 		icon = null;
 		name = "";
 		description = "";
+		weight = 0.0f;
 		stackable = false;
 		equipSlot = EquipSlot.primaryWeap;
 		dura = 100f;
@@ -22,6 +23,7 @@ public class Equip : Item {
 		icon = e.icon;
 		name = e.name;
 		description = e.description;
+		weight = e.weight;
 		stackable = false;
 		equipSlot = e.equipSlot;
 		dura = e.dura;
