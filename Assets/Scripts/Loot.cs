@@ -11,8 +11,9 @@ public class Loot : InteractableObject {
 
 	public override void Interact(Player p){
 		if ( item != null ){
-			if ( p.inventory.AddItem(item,amt) ){
+			if ( p.inventory.AddItem(new Item(item),amt) ){
 				Console.Log(p.name + " has gained " + amt + " " + item.name);
+				GameObject.FindWithTag("InventoryManager").GetComponent<InventoryManager>().UpdateInventory();
 				Destroy(gameObject);
 			} else {
 				Console.Log("Inventory is full!");

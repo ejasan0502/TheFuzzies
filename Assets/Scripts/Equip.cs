@@ -9,6 +9,7 @@ public class Equip : Item {
 	public Attributes reqs;
 
 	public Equip(){
+		icon = null;
 		name = "";
 		description = "";
 		stackable = false;
@@ -18,6 +19,7 @@ public class Equip : Item {
 		reqs = new Attributes();
 	}
 	public Equip(Equip e){
+		icon = e.icon;
 		name = e.name;
 		description = e.description;
 		stackable = false;

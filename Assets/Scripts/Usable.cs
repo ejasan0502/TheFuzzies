@@ -8,6 +8,7 @@ public class Usable : Item {
 	public bool aoe;
 
 	public Usable(){
+		icon = null;
 		name = "";
 		description = "";
 		stackable = true;
@@ -17,6 +18,7 @@ public class Usable : Item {
 		aoe = false;
 	}
 	public Usable(Usable u){
+		icon = u.icon;
 		name = u.name;
 		description = u.description;
 		stackable = true;

@@ -11,10 +11,17 @@ public class Inventory {
 	public Inventory(){
 		maxSlots = 0;
 		slots = new InventorySlot[maxSlots];
+		money = 0;
 	}
 	public Inventory(int ms){
 		maxSlots = ms;
 		slots = new InventorySlot[maxSlots];
+		money = 0;
+	}
+	public Inventory(int ms, int m){
+		maxSlots = ms;
+		slots = new InventorySlot[maxSlots];
+		money = m;
 	}
 	public Inventory(int ms, InventorySlot[] s, int m){
 		maxSlots = ms;
