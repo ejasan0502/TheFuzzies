@@ -25,6 +25,10 @@ public class InventoryManager : MonoBehaviour {
 	}
 	private GameObject[] slotObjects;
 
+	void Awake(){
+		p = Player.instance;
+	}
+
 	void Start(){
 		foreach (Transform t in transform){
 			t.gameObject.SetActive(display);
@@ -61,7 +65,15 @@ public class InventoryManager : MonoBehaviour {
 
 	public void UpdateInventory(){
 		currencyText.text = p.inventory.money+"";
-		weightText.text = p.inventory.weight+"";
+		weightText.text = p.inventory.weight+"/"+p.inventory.maxWeight;
+		
+		if ( p.inventory.weight > p.inventory.maxWeight*0.8f ){
+			weightText.color = Color.red;
+		} else if ( p.inventory.weight > p.inventory.maxWeight*0.4f ){
+			weightText.color = Color.yellow;
+		} else {
+			weightText.color = Color.green;
+		}
 	
 		for (int i = 0; i < p.inventory.slots.Length; i++){
 			if ( !Exists (i) && p.inventory.slots[i] != null ){

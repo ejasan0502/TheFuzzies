@@ -8,24 +8,28 @@ public class Inventory {
 	public InventorySlot[] slots = null;
 	public int money;
 	public float weight;
+	public float maxWeight;
 
 	public Inventory(){
 		maxSlots = 0;
 		slots = new InventorySlot[maxSlots];
 		money = 0;
 		weight = 0.0f;
+		maxWeight = 0.0f;
 	}
 	public Inventory(int ms){
 		maxSlots = ms;
 		slots = new InventorySlot[maxSlots];
 		money = 0;
 		weight = 0.0f;
+		maxWeight = 0.0f;
 	}
 	public Inventory(int ms, int m){
 		maxSlots = ms;
 		slots = new InventorySlot[maxSlots];
 		money = m;
 		weight = 0.0f;
+		maxWeight = 0.0f;
 	}
 	public Inventory(int ms, InventorySlot[] s, int m){
 		maxSlots = ms;
@@ -100,9 +104,19 @@ public class Inventory {
 	}
 	
 	private void CalculateWeight(){
+		maxWeight = Player.instance.MaxWeight;
 		weight = 0.0f;
 		foreach (InventorySlot i in slots){
 			if ( i != null ) weight += i.item.weight*i.amt;
+		}
+		
+		
+		if ( weight > maxWeight*0.8f ){
+			Player.instance.currentStats.movSpd = Player.instance.stats.movSpd * 0.5f;
+		} else if ( weight > maxWeight*0.4f ){
+			Player.instance.currentStats.movSpd = Player.instance.stats.movSpd;
+		} else {
+			Player.instance.currentStats.movSpd = Player.instance.stats.movSpd;
 		}
 	}
 
