@@ -29,4 +29,9 @@ public class Usable : Item {
 		self = u.self;
 		aoe = u.aoe;
 	}
+	
+	public override Usable GetAsUsable ()
+	{
+		return this;
+	}
 }

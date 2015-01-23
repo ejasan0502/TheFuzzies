@@ -2,8 +2,8 @@
 using System.Collections;
 
 [System.Serializable]
-public class Item {
-	public string name;
+public class Item : MonoBehaviour {
+	public new string name;
 	public Texture2D icon;
 	public string description;
 	public float weight;
@@ -33,5 +33,14 @@ public class Item {
 		weight = i.weight;
 		stackable = i.stackable;
 		recipe = i.recipe;
+	}
+	
+	public virtual Equip GetAsEquip(){
+		Console.Log (name + " is not an equip");
+		return null;
+	}
+	public virtual Usable GetAsUsable(){
+		Console.Log (name + " is not an usable");
+		return null;
 	}
 }

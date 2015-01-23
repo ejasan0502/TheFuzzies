@@ -14,7 +14,7 @@ public class Equip : Item {
 		description = "";
 		weight = 0.0f;
 		stackable = false;
-		equipSlot = EquipSlot.primaryWeap;
+		equipSlot = EquipSlot.weapon;
 		dura = 100f;
 		stats = new Stats();
 		reqs = new Attributes();
@@ -34,21 +34,18 @@ public class Equip : Item {
 	public bool CanEquip(Attributes a){
 		return a >= reqs;
 	}
+	
+	public override Equip GetAsEquip ()
+	{
+		return this;
+	}
 }
 
 public enum EquipSlot {
-	primaryWeap = 0,
-	secondaryWeap = 1,
-
-	helm = 2,
-	chest = 3,
-	pants = 4,
-	boots = 5,
-	gloves = 6,
-
-	necklace = 7,
-	ring1 = 8,
-	ring2 = 9,
-	earring = 10,
-	bracelet = 11,
+	weapon = 0,
+	hat = 1,
+	shirt = 2,
+	pants = 3,
+	shoes = 4,
+	gloves = 5
 }

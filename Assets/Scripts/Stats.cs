@@ -145,4 +145,27 @@ public class Stats {
 
 		return s;
 	}
+	
+	public override string ToString ()
+	{
+		string s = "";
+		
+		s += "Max HP: " + hp + "\n";
+		s += "Max MP: " + mp + "\n";
+		s += "HP Recov: " + hpRecov + "\n";
+		s += "MP Recov: " + mpRecov + "\n";
+		s += "Min P.Atk: " + physMinDmg + "\n";
+		s += "Max P.Atk: " + physMaxDmg + "\n";
+		s += "Min M.Atk: " + magMinDmg + "\n";
+		s += "Max M.Atk: " + magMaxDmg + "\n";
+		s += "P.Def: " + pdef + "\n";
+		s += "M.Def: " + mdef + "\n";
+		s += "Crit Chance: " + critChance + "\n";
+		s += "Crit Dmg: " + critDmg + "\n";
+		s += "Attack Spd: " + atkSpd + "\n";
+		s += "Cast Spd: " + castSpd + "\n";
+		s += "Mov't Spd: " + movSpd + "\n";
+		
+		return s;
+	}
 }

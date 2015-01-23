@@ -81,10 +81,7 @@ public class InventoryManager : MonoBehaviour {
 				o.transform.position = slotsRect.transform.position;
 				o.transform.SetParent(slotsRect.transform);
 				o.name = i+"";
-				if ( p.inventory.slots[i].item.stackable )
-					o.transform.localScale *= 0.25f;
-				else
-					o.transform.localScale *= 0.5f;
+				o.transform.localScale *= 0.25f;
 				o.SetActive(display);
 				if ( display ) {
 					o.GetComponent<RawImage>().texture = p.inventory.slots[i].item.icon;

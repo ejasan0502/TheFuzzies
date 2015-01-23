@@ -103,13 +103,16 @@ public class Inventory {
 		return null;
 	}
 	
+	public Item GetItemAtSlot(int x){
+		return slots[x].item;
+	}
+	
 	private void CalculateWeight(){
 		maxWeight = Player.instance.MaxWeight;
 		weight = 0.0f;
 		foreach (InventorySlot i in slots){
 			if ( i != null ) weight += i.item.weight*i.amt;
 		}
-		
 		
 		if ( weight > maxWeight*0.8f ){
 			Player.instance.currentStats.movSpd = Player.instance.stats.movSpd * 0.5f;
@@ -121,11 +124,9 @@ public class Inventory {
 	}
 
 	private int GetItemSlot(Item item){
-		if ( item.stackable ){
-			for (int i = 0; i < slots.Length; i++){
-				if ( slots[i] == null || item.name.ToLower() == slots[i].item.name.ToLower() ){
-					return i;
-				}
+		for (int i = 0; i < slots.Length; i++){
+			if ( slots[i] == null || (item.stackable && item.name.ToLower() == slots[i].item.name.ToLower()) ){
+				return i;
 			}
 		}
 

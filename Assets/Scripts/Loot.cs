@@ -11,7 +11,7 @@ public class Loot : InteractableObject {
 
 	public override void Interact(Player p){
 		if ( item != null ){
-			if ( p.inventory.AddItem(new Item(item),amt) ){
+			if ( p.inventory.AddItem(item,amt) ){
 				Console.Log(p.name + " has gained " + amt + " " + item.name);
 				
 				InventoryManager im = InventoryManager.instance;
